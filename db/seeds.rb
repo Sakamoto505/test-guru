@@ -20,10 +20,10 @@ categories1, categories2 = Category.create!(
 )
 
 test1, test2, test3, test4 = Test.create!(
-  [{ title: 'Nissan', level: 1, category_id: categories1.id, author_id: test_author.id },
-   { title: 'Mitsubishi', level: 2, category_id: categories1.id, author_id: test_author.id },
-   { title: 'Mercedes-Benz', level: 1, category_id: categories2.id, author_id: test_author.id },
-   { title: 'Mercedes-Benz', level: 2, category_id: categories2.id, author_id: test_author.id }]
+  [{ title: 'Nissan', level: 1, category: categories1, author: test_author },
+   { title: 'Mitsubishi', level: 2, category: categories1, author: test_author },
+   { title: 'Mercedes-Benz', level: 1, category: categories2, author: test_author },
+   { title: 'Mercedes-Benz', level: 2, category: categories2, author: test_author }]
 )
 
 questions1,
@@ -31,28 +31,28 @@ questions2,
 questions3,
 questions4 =
   Question.create!([
-                     { body: 'What year was Nissan founded?', test_id: test1.id },
-                     { body: 'How many generations does Mitsubishi evolution have', test_id: test2.id },
-                     { body: 'What year was Mercedes founded?', test_id: test3.id },
-                     { body: 'Fastest mercedes car?', test_id: test4.id }
+                     { body: 'What year was Nissan founded?', test: test1 },
+                     { body: 'How many generations does Mitsubishi evolution have', test: test2 },
+                     { body: 'What year was Mercedes founded?', test: test3 },
+                     { body: 'Fastest mercedes car?', test: test4 }
                    ])
 
 Answer.create!(
-  [{ body: 'December 26, 1933', correct: true, question_id: questions1.id },
-   { body: 'December 26, 1941', question_id: questions1.id },
-   { body: 'What is nissan?', question_id: questions1.id },
-   { body: '10', correct: true, question_id: questions2.id },
-   { body: '7', question_id: questions2.id },
-   { body: 'I dont watch pokemon', question_id: questions2.id },
-   { body: 'June 28, 1926', correct: true, question_id: questions3.id },
-   { body: 'June 28, 1826', question_id: questions3.id },
-   { body: 'Im a BMW fan', question_id: questions3.id },
-   { body: 'Mercedes SLR Stirling Moss', correct: true, question_id: questions4.id },
-   { body: 'Mercedes-AMG® C 63 S', question_id: questions4.id },
-   { body: 'BMW M4', question_id: questions4.id }]
+  [{ body: 'December 26, 1933', correct: true, question: questions1 },
+   { body: 'December 26, 1941', question: questions1 },
+   { body: 'What is nissan?', question: questions1 },
+   { body: '10', correct: true, question: questions2 },
+   { body: '7', question: questions2 },
+   { body: 'I dont watch pokemon', question: questions2 },
+   { body: 'June 28, 1926', correct: true, question: questions3 },
+   { body: 'June 28, 1826', question: questions3 },
+   { body: 'Im a BMW fan', question: questions3 },
+   { body: 'Mercedes SLR Stirling Moss', correct: true, question: questions4 },
+   { body: 'Mercedes-AMG® C 63 S', question: questions4 },
+   { body: 'BMW M4', question: questions4 }]
 )
 
 UserTest.create!([
-                   { user_id: player1.id, test_id: test1.id },
-                   { user_id: player2.id, test_id: test2.id, complete: true }
+                   { user: player1, test: test1 },
+                   { user: player2, test: test2, complete: true }
                  ])
