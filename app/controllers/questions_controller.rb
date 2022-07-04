@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
-    @questions = @test.questions.all
+    @questions = @test.questions
   end
 
   def create
@@ -24,7 +24,11 @@ class QuestionsController < ApplicationController
   def show; end
 
   def destroy
-    @question.destroy
+    if @question.destroy
+      render plain: "Question was deleted"
+    else
+      render plain: "Question not deleted"
+    end
   end
 
   private
