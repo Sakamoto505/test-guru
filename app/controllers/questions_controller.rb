@@ -21,7 +21,9 @@ class QuestionsController < ApplicationController
 
   def new; end
 
-  def show; end
+  def show
+    render html: "<h2> Question: #{@question.body} </h2>".html_safe
+  end
 
   def destroy
     if @question.destroy
