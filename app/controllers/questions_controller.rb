@@ -26,11 +26,7 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-    if @question.destroy
-      render plain: "Question was deleted"
-    else
-      render plain: "Question not deleted"
-    end
+    render plain: 'Question was deleted' if @question.destroy
   end
 
   private
