@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class TestsController < ApplicationController
-  before_action :find_test, only: %i[show edit update]
+  before_action :find_test, only: %i[show edit update destroy start]
+  before_action :set_user, only: :start
   before_action :questions, only: %i[show destroy]
 
   def new
@@ -13,7 +14,6 @@ class TestsController < ApplicationController
   end
 
   def destroy
-    @test = Test.find(params[:id])
     @test.destroy
     redirect_to tests_path
   end
@@ -39,6 +39,11 @@ class TestsController < ApplicationController
     end
   end
 
+  def start
+    @user.tests.push(@test)
+    redirect_to @user.test_passage(@test)
+  end
+
   private
 
   def find_test
@@ -51,5 +56,9 @@ class TestsController < ApplicationController
 
   def test_params
     params.require(:test).permit(:title, :level, :category_id, :author_id)
+  end
+
+  def set_user
+    @user = User.first
   end
 end
