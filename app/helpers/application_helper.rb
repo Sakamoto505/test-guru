@@ -9,9 +9,9 @@ module ApplicationHelper
     link_to repo, "https://github.com/#{author}/#{repo}", target: '_blank'
   end
 
-  def flash_messages(flash)
-    flash.map do |key, msg|
-      content_tag :div, msg, id: key, class: 'flash alert'
-    end.join.html_safe
+  def flash_messages(type = :alert)
+    return unless flash[type.to_sym]
+
+    tag.div flash[type.to_sym], id: type, class: "flash #{type}"
   end
 end
