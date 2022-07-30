@@ -1,16 +1,20 @@
 # frozen_string_literal: true
 
-# require 'digest/sha1'
-
 class User < ApplicationRecord
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :validatable,
+         :confirmable
+
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages
   has_many :tests_author, class_name: 'Test', foreign_key: :author_id, dependent: :destroy
 
-  validates :name, presence: true
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
 
-  has_secure_password
+  validates :first_name, :last_name, presence: true
 
   def user_result(level)
     tests.where(level: level)
