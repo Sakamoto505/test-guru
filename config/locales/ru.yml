@@ -1,2 +1,71 @@
 ru:
   hello: "Привет мир"
+
+  helpers:
+    submit:
+      test:
+        create: 'Создать тест'
+        update: 'Обновить тест'
+      question:
+        create: 'Создать Вопрос'
+        update: 'Обновить Вопрос'
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: 'Категория'
+      question:
+        body: 'Тело'
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+    action:
+      show: 'Показать'
+      edit: 'Редактировать'
+      delete: 'Удалить'
+      confirm: 'Вы уверены?'
+  navigation:
+    back: 'Назад'
+    edit:
+  tests:
+    index:
+      header: "Доступные тесты"
+      add_new: 'Добавить новый тест'
+      title: 'Название'
+      level: 'Уровень'
+      category: 'Категория'
+      question_cont: 'Количество вопросов'
+      actions: 'Действие'
+    show:
+      title: 'Название теста'
+      level: 'Уровень теста'
+      questions: 'Вопрос теста'
+      new_question: 'Добавить новый вопрос'
+    new:
+      title: "Создать тест"
+    edit:
+      title: 'Редактировать тест'
+    start: "Старт"
+  test_passages:
+    show:
+      header: 'Прохождение %{test_title} тест'
+      question_sum: 'Общее количество вопросов в тесте: %{sum}'
+      question_current: 'Текущий вопрос теста: %{current}'
+      next: 'Вперед'
+    result:
+      header: "Тест %{title} успешно завершен"
+      back: 'Вернуться к списку тестов'
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан"
+      index:
+        header: "Доступные тесты"
+
+  tests_mailer:
+    copmleted_test:
+      subject: 'Вы успешно завершили тест на  TestGuru!'

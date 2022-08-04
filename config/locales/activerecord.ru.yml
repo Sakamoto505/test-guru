@@ -1,0 +1,9 @@
+ru:
+  activerecord:
+    test: "Тест"
+  attributes:
+    test:
+      title: "Название"
+  errors:
+    messages:
+      blanl: "Не может быть пустым"

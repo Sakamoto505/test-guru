@@ -1,4 +1,4 @@
-<h1>Test <%= @test_passage.test.title %> Test was Completed!</h1>
+<h1><%= t('.header', title: @test_passage.test.title)%> </h1>
 
 <b><% if @test_passage.success?%></b>
 <h2 style ="color: #00FF00; "> <em>Поздравляю, вы успешно прошли тест.</em></h2>
@@ -6,5 +6,5 @@
 <h2 style ="color: #ff0000; "> <em>К сожалению, вы не прошли тест.</em></h2>
 <%end%>
 
-  <h3><%= link_to 'Back to all tests', tests_path %>
+  <h3><%= link_to t('test_passages.result.back'), tests_path %>
   </h3>
