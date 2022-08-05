@@ -1,26 +1,26 @@
 <p>
-  <strong>Title:</strong>
+  <strong><%= t('tests.show.title') %>:</strong>
   <%=@test.title %>
 </p>
 
 <p>
-  <strong>Level:</strong>
+  <strong><%= t('tests.show.level') %>:</strong>
   <%=@test.level %>
 </p>
 
 <p>
-  <ul>Questions</ul>
+  <strong> <%= t('tests.show.questions') %>: </strong>
 <%= render @questions %>
 </p>
 
 
-<%= link_to 'Add new question', new_admin_test_question_path(@test) %>
+<%= link_to t('tests.show.new_question'), new_admin_test_question_path(@test) %>
 
 <!--<ol>-->
   <%#=  render partial: 'questions/question', collection: @test.questions %>
 <!--</ol>-->
 
- <%= link_to 'Back', admin_tests_path %> ||
- <%= link_to 'Edit', edit_admin_test_path(@test) %>
+ <%= link_to t('navigation.back'), admin_tests_path %> ||
+ <%= link_to t('shared.action.delete'), edit_admin_test_path(@test) %>
 
 

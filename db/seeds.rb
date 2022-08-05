@@ -10,8 +10,8 @@
 
 test_author, player1, player2 = User.create!(
   [{ first_name: 'Bogdan', last_name: 'Qqq', password: 'bogdan_love_14_1', email: 'bogdan@mail.com' },
-   { first_name: 'Sakamota',last_name: 'Www', password: 'sakamoto_love_14_1', email: 'sakamoto@mail.com' },
-   { first_name: 'Johan',last_name: 'Eee', password: 'johan_love_14_1', email: 'johan@mail.com' }]
+   { first_name: 'Sakamota', last_name: 'Www', password: 'sakamoto_love_14_1', email: 'sakamoto@mail.com' },
+   { first_name: 'Johan', last_name: 'Eee', password: 'johan_love_14_1', email: 'johan@mail.com' }]
 )
 
 categories1, categories2 = Category.create!(

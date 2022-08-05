@@ -13,11 +13,8 @@ Rails.application.routes.draw do
   end
 
   resources :tests, only: %i[index] do
-      post :start, on: :member
+    post :start, on: :member
   end
-
-
-
 
   namespace :admin do
     resources :tests do
