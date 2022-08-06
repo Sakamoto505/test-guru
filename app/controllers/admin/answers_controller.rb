@@ -34,7 +34,7 @@ class Admin::AnswersController < Admin::BaseController
     redirect_to @answer.question
   end
 
-    private
+  private
 
   def find_question
     @question = Question.find(params[:question_id])
@@ -48,3 +48,4 @@ class Admin::AnswersController < Admin::BaseController
     params.require(:answer).permit(:body, :correct)
   end
 end
+

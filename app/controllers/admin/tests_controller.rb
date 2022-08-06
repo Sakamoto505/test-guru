@@ -38,7 +38,7 @@ class Admin::TestsController < Admin::BaseController
     end
   end
 
-    private
+  private
 
   def find_test
     @test = Test.find(params[:id])
@@ -52,3 +52,4 @@ class Admin::TestsController < Admin::BaseController
     params.require(:test).permit(:title, :level, :category_id, :author_id)
   end
 end
+

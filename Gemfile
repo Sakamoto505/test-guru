@@ -29,6 +29,10 @@ gem 'pry'
 gem 'rails-i18n', '~> 6.0'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+#
+# UI
+gem 'bootstrap', '~> 5.2.0'
+gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
