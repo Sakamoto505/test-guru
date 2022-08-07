@@ -40,7 +40,7 @@ class Admin::QuestionsController < Admin::BaseController
     @question = @test.questions.new
   end
 
-    private
+  private
 
   def questions_params
     params.require(:question).permit(:body)
