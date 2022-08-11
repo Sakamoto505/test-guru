@@ -6,16 +6,14 @@ class TestPassagesController < ApplicationController
 
   def show; end
 
-  def result
-
-  end
+  def result; end
 
   def gist
     service = GistQuestionService.new(@test_passage.current_question).call
     flash_options = if service.success?
-                      current_user.gists.create(question_id: @test_passage.current_question_id, link_to_gist: result)
+                      current_user.gists.create(question_id: @test_passage.current_question_id, link_to_gist: service.url)
                       { notice: t('.success',
-                                  gist_url: view_context.link_to('Gist', service.result.html_url,
+                                  gist_url: view_context.link_to('Gist', service.url,
                                                                  target: '_blank')) }
                     else
                       { alert: t('.failure') }
