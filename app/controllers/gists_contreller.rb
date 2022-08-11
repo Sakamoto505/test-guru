@@ -1,6 +1,6 @@
 class GistsController < ApplicationController
 
-  def create
-
-  end
+  # def create
+  #
+  # end
 end
