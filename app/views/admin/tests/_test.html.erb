@@ -3,7 +3,6 @@
 
 <tr>
   <td class="text-left"><%= test.title %></td>
-  <td><%=test_level(test)%></td>
   <td class="text-center"><%= test.category.name %></td>
   <td class="text-center"><%= test.questions.count %></td>
   <td><%= link_to t('shared.action.show'), admin_test_path(test), class: "btn btn-primary btn-circle" %></td>

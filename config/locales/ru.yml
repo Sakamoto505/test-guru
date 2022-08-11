@@ -38,7 +38,7 @@ ru:
       title: 'Название'
       level: 'Уровень'
       category: 'Категория'
-      question_cont: 'Количество вопросов'
+      question_cont: 'Выпросы'
       actions: 'Действие'
     show:
       title: 'Название теста'
@@ -55,17 +55,29 @@ ru:
       header: 'Прохождение %{test_title} тест'
       question_sum: 'Общее количество вопросов в тесте: %{sum}'
       question_current: 'Текущий вопрос теста: %{current}'
+      gist_question : 'Гист вопрос'
       next: 'Вперед'
     result:
       header: "Тест %{title} успешно завершен"
       back: 'Вернуться к списку тестов'
+    gist:
+      success: "Gist успешно сохранен! Вот ваша ссылка - %{gist_url}"
+      failure: "Во время сохранения gist произошла ошибка"
   admin:
     tests:
       create:
         success: "Тест успешно создан"
       index:
         header: "Доступные тесты"
+  gists:
+    index:
+      gists: "Гисты"
+      question: "Вопрос"
+      links: "Ссылка"
+      user: "Пользователь"
+      back: "Назад"
 
   tests_mailer:
     copmleted_test:
       subject: 'Вы успешно завершили тест на  TestGuru!'
+
