@@ -60,7 +60,8 @@ ru:
     result:
       header: "Тест %{title} успешно завершен"
       back: 'Вернуться к списку тестов'
-    gist:
+  gist:
+    create:
       success: "Gist успешно сохранен! Вот ваша ссылка - %{gist_url}"
       failure: "Во время сохранения gist произошла ошибка"
   admin:

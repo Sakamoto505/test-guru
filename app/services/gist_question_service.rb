@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GistQuestionService
   attr_reader :result
 
@@ -18,10 +20,6 @@ class GistQuestionService
     Response.new(result.html_url)
   end
 
-  def success?
-    !!@result[:url]
-  end
-
   private
 
   def gist_params
@@ -39,12 +37,9 @@ class GistQuestionService
     [@question.body, *@question.answers.pluck(:body)].join("\n")
   end
 
-
-  private
-
   def default_client
     Octokit::Client.new(
-      access_token: Rails.application.credentials.dig(:github, :access_token))
+      access_token: Rails.application.credentials.dig(:github, :access_token)
+    )
   end
-
 end

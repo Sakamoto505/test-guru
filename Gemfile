@@ -36,17 +36,14 @@ gem 'jquery-rails'
 
 # NET_WORKING
 
-gem 'faraday'
-gem 'faraday-retry'
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise', '~> 4.0'
 
-gem "octokit", "~> 4.0"
-#ENV
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'octokit', '~> 4.0'
+# ENV
+gem 'dotenv-rails', groups: %i[development test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
