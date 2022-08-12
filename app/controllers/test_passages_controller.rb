@@ -16,7 +16,6 @@ class TestPassagesController < ApplicationController
       redirect_to result_test_passage_path(@test_passage)
     else
       render :show
-
     end
   end
 

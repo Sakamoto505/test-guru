@@ -51,17 +51,31 @@ en:
       header: 'Passing the %{test_title} Test'
       question_sum: 'The total number of questions in the test: %{sum}'
       question_current: 'Current test question: %{current}'
+      gist_question : 'Gist Question'
       next: 'Next'
     result:
       header: "The %{title} Test was Completed "
       back: 'back to the all tests'
+  gist:
+    create:
+      success: "Gist was successfully created! Here is your link - %{gist_url}"
+      failure: "An error occurred while saving gist"
   admin:
     tests:
       create:
         success: "Test created successfully"
       index:
         header: "Tricky Tests"
+  gists:
+    index:
+      gists: "GISTS"
+      question: "Question"
+      links: "links"
+      user: "user"
+      back: "Назад"
   tests_mailer:
     copmleted_test:
       subject: 'You just completed the TestGuru test!'
-
+  services:
+    gist_question_services:
+      description: 'A question about %{test_title} from TestGuru'

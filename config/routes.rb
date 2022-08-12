@@ -10,13 +10,14 @@ Rails.application.routes.draw do
     member do
       get :result
     end
+    resources :gists, only: :create, shallow: true
   end
 
   resources :tests, only: %i[index] do
     post :start, on: :member
   end
-
   namespace :admin do
+    resources :gists, only: %i[index]
     resources :tests do
       resources :questions, shallow: true, except: :index do
         resources :answers, shallow: true, except: :index
