@@ -1,17 +1,14 @@
-
 document.addEventListener('turbolinks:load', function() {
-    let password = document.querySelector('#user_password');
-    let confirmPassword = document.querySelector("#user_password_confirmation");
+    let password = document.getElementById('password');
+    let confirmPassword = document.getElementById("password_confirmation");
     if (password && confirmPassword) {
-        password.addEventListener('change', check)
-        confirmPassword.addEventListener('change', check)
+        (password && confirmPassword).addEventListener('change', check)
     }
 })
 
 function check() {
-    let password = document.querySelector('#user_password');
-    let confirmPassword = document.querySelector("#user_password_confirmation");
-
+    let password = document.getElementById('password');
+    let confirmPassword = document.getElementById("password_confirmation");
     if (password.value === "" || confirmPassword.value === "")
     {
         confirmPassword.classList.remove('wrong_password', 'right_password' );
@@ -25,5 +22,4 @@ function check() {
         confirmPassword.classList.add('right_password');
     }
 }
-
 

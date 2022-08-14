@@ -6,6 +6,7 @@ document.addEventListener('turbolinks:load', function () {
 
 function sortRowsByTitle() {
     let table = document.querySelector('table')
+
     let rows = table.querySelectorAll('tr')
     let sortedRows = []
 
@@ -22,6 +23,7 @@ function sortRowsByTitle() {
         this.querySelector('.octicon-arrow-down').classList.remove('hide')
         this.querySelector('.octicon-arrow-up').classList.add('hide')
     }
+
 
     let sortedTable = document.createElement('table')
 

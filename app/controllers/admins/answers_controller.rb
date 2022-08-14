@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-
-class Admin::AnswersController < Admin::BaseController
+module Admin
+  class AnswersController < Admin::BaseController
     before_action :find_question, only: %i[new create]
     before_action :set_answer, only: %i[show edit update destroy]
 
@@ -49,4 +49,4 @@ class Admin::AnswersController < Admin::BaseController
       params.require(:answer).permit(:body, :correct)
     end
   end
-
+end

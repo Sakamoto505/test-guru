@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class Admin::TestsController < Admin::BaseController
+module Admin
+  class TestsController < Admin::BaseController
     before_action :find_test, only: %i[show edit update destroy]
     before_action :questions, only: %i[show destroy]
 
@@ -52,4 +53,4 @@ class Admin::TestsController < Admin::BaseController
       params.require(:test).permit(:title, :level, :category_id, :author_id)
     end
   end
-
+end

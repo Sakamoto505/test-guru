@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-
-class Admin::QuestionsController < Admin::BaseController
+module Admin
+  class QuestionsController < Admin::BaseController
     before_action :find_test, only: %i[create new]
     before_action :find_question, only: %i[show destroy update edit]
     before_action :authenticate_user!
@@ -59,4 +59,4 @@ class Admin::QuestionsController < Admin::BaseController
       render plain: 'Question not found'
     end
   end
-
+end
