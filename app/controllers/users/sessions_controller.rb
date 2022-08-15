@@ -9,8 +9,8 @@ module Users
       flash[:notice] = "Welcome, #{current_user.first_name} #{current_user.last_name}"
     end
 
-    def after_sign_in_path_for(current_user)
-      current_user.is_a?(Admin) ? admin_tests_path : tests_path
+    def after_sign_in_path_for(_resource)
+      current_user_admin? ? admins_tests_path : tests_path
     end
 
     def configure_permitted_parameters

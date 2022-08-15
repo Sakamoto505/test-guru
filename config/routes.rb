@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :tests, only: %i[index] do
     post :start, on: :member
   end
-  namespace :admin do
+  namespace :admins do
     resources :gists, only: %i[index]
     resources :tests do
       resources :questions, shallow: true, except: :index do

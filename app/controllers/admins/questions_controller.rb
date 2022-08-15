@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Admin
+module Admins
   class QuestionsController < Admin::BaseController
     before_action :find_test, only: %i[create new]
     before_action :find_question, only: %i[show destroy update edit]
@@ -11,7 +11,7 @@ module Admin
     def create
       @question = @test.questions.new(questions_params)
       if @question.save
-        redirect_to admin_test_path(@test)
+        redirect_to admins_test_path(@test)
       else
         render :new
       end
@@ -21,7 +21,7 @@ module Admin
 
     def update
       if @question.update(questions_params)
-        redirect_to admin_question_path(@question)
+        redirect_to admins_question_path(@question)
       else
         render :edit
       end
@@ -31,7 +31,7 @@ module Admin
 
     def destroy
       if @question.destroy
-        redirect_to admin_test_path(@question.test)
+        redirect_to admins_test_path(@question.test)
       else
         render :show
       end
