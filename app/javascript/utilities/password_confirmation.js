@@ -1,14 +1,14 @@
-document.addEventListener('turbolinks:load', function() {
-    let password = document.getElementById('password');
-    let confirmPassword = document.getElementById("password_confirmation");
+  document.addEventListener('turbolinks:load', function() {
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById("password_confirmation");
     if (password && confirmPassword) {
         (password && confirmPassword).addEventListener('change', check)
     }
 })
 
-function check() {
-    let password = document.getElementById('password');
-    let confirmPassword = document.getElementById("password_confirmation");
+  function check() {
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById("password_confirmation");
     if (password.value === "" || confirmPassword.value === "")
     {
         confirmPassword.classList.remove('wrong_password', 'right_password' );
