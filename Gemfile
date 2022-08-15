@@ -33,7 +33,7 @@ gem 'rails-i18n', '~> 6.0'
 # UI
 gem 'bootstrap', '~> 5.2.0'
 gem 'jquery-rails'
-
+gem 'octicons_helper'
 # NET_WORKING
 
 # Reduces boot times through caching; required in config/boot.rb

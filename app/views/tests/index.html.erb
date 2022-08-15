@@ -2,9 +2,12 @@
   <div class="col">
 
 <h1><%= t('tests.index.header') %></h1>
-<table>
+<table class="table">
   <tr>
-    <th><%= t('tests.index.title') %></th>
+    <th class="sort-by-title pointer"><%= t('tests.index.title') %>
+      <%= octicon 'arrow-up', class: 'caption text-success hide' %>
+      <%= octicon 'arrow-down', class: 'caption text-success hide' %>
+    </th>
     <th><%= t('tests.index.level') %></th>
     <th><%= t('tests.index.category') %></th>
     <th><%= t('tests.index.question_cont') %></th>
