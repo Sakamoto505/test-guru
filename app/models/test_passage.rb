@@ -21,6 +21,14 @@ class TestPassage < ApplicationRecord
     (Float(correct_questions * 100) / test.questions.count)
   end
 
+  def questions_count
+    test.questions.count
+  end
+
+  def progress_bar
+    (question_number * 100) / questions_count
+  end
+
   def question_number
     test.questions.where('id <= ?', current_question.id).count
   end

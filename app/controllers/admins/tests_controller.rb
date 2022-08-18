@@ -2,16 +2,15 @@
 
 module Admins
   class TestsController < Admins::BaseController
-    before_action :find_test, only: %i[show edit update destroy]
+    before_action :find_tests, only: %i[index update_inline]
+    before_action :find_test, only: %i[show edit update destroy update_inline]
     before_action :questions, only: %i[show destroy]
 
     def new
       @test = Test.new
     end
 
-    def index
-      @tests = Test.all
-    end
+    def index; end
 
     def destroy
       @test.destroy
@@ -35,11 +34,24 @@ module Admins
       if @test.update(test_params)
         redirect_to admins_tests_path(@test)
       else
-        redirect_to :edit_test
+        render :edit
+      end
+    end
+
+
+    def update_inline
+      if @test.update(test_params)
+        redirect_to admins_tests_path
+    else
+      render :index
       end
     end
 
     private
+
+    def find_tests
+      @tests = Test.all
+    end
 
     def find_test
       @test = Test.find(params[:id])

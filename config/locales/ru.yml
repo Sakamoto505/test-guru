@@ -70,6 +70,8 @@ ru:
         success: "Тест успешно создан"
       index:
         header: "Доступные тесты"
+      form_inline:
+        submit: 'Ок'
   gists:
     index:
       gists: "Гисты"

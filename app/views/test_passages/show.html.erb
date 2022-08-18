@@ -1,25 +1,40 @@
-<h1> <%= t('test_passages.show.header', test_title: @test_passage.test.title) %> </h1>
-
-<p>
-  <b><%= @test_passage.current_question.body %></b>
-</p>
+<div class="row justify-content-center mt-3">
+  <div class="col">
 
 
-<h3> <%= t('test_passages.show.question_sum', sum: @test_passage.test.questions.count) %></h3>
-<h3> <%= t( 'test_passages.show.question_current', current: @test_passage.question_number )%></h3>
+<!--    <div class="greyBar"><%#= content_tag :div, "#{@test_passage.progress_bar}%", class: 'greenBar', data: { progress_bar: @test_passage.progress_bar } %>-->
+<!--    </div>-->
 
-<%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
-  <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
-    <p>
+    <div class="progress">
+      <%= tag.div class: 'progress-bar progress-bar-striped progress-bar-animated',
+                  role: 'progressbar',
+                  data: { progress: @test_passage.question_number,
+                          count: @test_passage.questions_count } %>
+    </div>
+    <div>  <h2 class="text-center text-success"> <%= @test_passage.progress_bar %>% </h2>  </div>
+
+    <h1><%= t('test_passages.show.header', test_title: @test_passage.test.title) %></h1>
+
+  <p><b><%= @test_passage.current_question.body %></b></p>
+
+  <h3><%= t('test_passages.show.question_sum', sum: @test_passage.test.questions.count) %></h3>
+
+   <h3><%= t( 'test_passages.show.question_current', current: @test_passage.question_number )%></h3>
+
+  <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
+    <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
+     <p>
       <%= b.check_box id: "answer_ids_#{b.object.id}" %>
       <%= b.label %>
-    </p>
-  <% end %>
+     </p>
+   <% end %>
 
   <p><%= link_to t('.gist_question'), test_passage_gists_path(@test_passage), method: :post %></p>
   <p> <%= form.submit t('test_passages.show.next') %></p>
   <br><%= link_to 'Back', tests_path %><br>
 
-<%end %>
+    <%end %>
+  </div>
+</div>
 
 
