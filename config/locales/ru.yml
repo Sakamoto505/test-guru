@@ -64,12 +64,14 @@ ru:
     create:
       success: "Gist успешно сохранен! Вот ваша ссылка - %{gist_url}"
       failure: "Во время сохранения gist произошла ошибка"
-  admin:
+  admins:
     tests:
       create:
         success: "Тест успешно создан"
       index:
         header: "Доступные тесты"
+      form_inline:
+        submit: 'Ок'
   gists:
     index:
       gists: "Гисты"
