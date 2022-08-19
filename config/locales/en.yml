@@ -74,7 +74,7 @@ en:
       question: "Question"
       links: "links"
       user: "user"
-      back: "Назад"
+      back: "back"
   tests_mailer:
     copmleted_test:
       subject: 'You just completed the TestGuru test!'

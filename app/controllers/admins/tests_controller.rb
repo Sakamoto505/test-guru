@@ -38,12 +38,11 @@ module Admins
       end
     end
 
-
     def update_inline
       if @test.update(test_params)
         redirect_to admins_tests_path
-    else
-      render :index
+      else
+        render :index
       end
     end
 

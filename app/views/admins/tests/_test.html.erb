@@ -10,16 +10,16 @@
   <td class="align-middle"><%= test_level(test) %></td>
   <td class="align-middle"><%= test.category.name %></td>
   <td class="align-middle"><%= test.questions.count %></td>
-  <td class="align-middle"><%= link_to t('shared.action.show'), admins_test_path(test), class: "btn btn-primary btn-circle" %></td>
+  <td class="align-middle"><%= link_to t('shared.action.show'), admins_test_path(test)%></td>
   <td class="align-middle">
     <%= link_to t('shared.action.edit'),
                 edit_admins_test_path(test),
                 data: { test_id: test.id },
-                class: 'form-inline-link btn btn-primary btn-circle' %>
+                class: 'form-inline-link' %>
   </td>
 
   <td class="align-middle"> <%= link_to t('shared.action.delete'),
-                   admins_test_path(test),class: "btn btn-primary btn-circle",
+                   admins_test_path(test),
            method: :delete,
                    data: { confirm: t('shared.action.confirm')} %> </td>
 </tr>
