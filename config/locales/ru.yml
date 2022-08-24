@@ -84,3 +84,5 @@ ru:
     copmleted_test:
       subject: 'Вы успешно завершили тест на  TestGuru!'
 
+  feedback:
+    title: 'Форма обратной связи '

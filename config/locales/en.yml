@@ -81,3 +81,5 @@ en:
   services:
     gist_question_services:
       description: 'A question about %{test_title} from TestGuru'
+  feedback:
+    title: 'Feedback form'

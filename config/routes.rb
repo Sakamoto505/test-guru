@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     post :start, on: :member
   end
 
+  resources :feedback, only: %i[new create]
+
   namespace :admins do
     resources :gists, only: %i[index]
     resources :tests do
