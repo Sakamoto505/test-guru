@@ -3,6 +3,6 @@ class FeedbackMailer < ApplicationMailer
     @user = user
     @text = text
 
-    mail to: Admin.first.email
+    mail to: ENV['ADMIN_EMAIL']
   end
 end
