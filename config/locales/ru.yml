@@ -30,7 +30,9 @@ ru:
       confirm: 'Вы уверены?'
   navigation:
     back: 'Назад'
-    edit:
+    edit: 'Редактировать'
+    show: 'Посмотреть'
+    delete: 'Удалить'
   tests:
     index:
       header: "Доступные тесты"
@@ -72,6 +74,9 @@ ru:
         header: "Доступные тесты"
       form_inline:
         submit: 'Ок'
+    question:
+      show: 'Добавить новый ответ'
+
   gists:
     index:
       gists: "Гисты"

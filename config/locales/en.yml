@@ -28,6 +28,9 @@ en:
       confirm: 'Are you sure?'
   navigation:
     back: 'Back'
+    edit: 'Edit'
+    show: 'Show'
+    delete: 'Delete'
   tests:
     index:
       header: "Tricky Tests"
