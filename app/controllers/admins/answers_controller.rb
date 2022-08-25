@@ -16,7 +16,7 @@ module Admins
     def create
       @answer = @question.answers.new(answer_params)
       if @answer.save
-        redirect_to @answer
+        redirect_to admins_answer_path(@answer)
       else
         render :new
       end
@@ -32,7 +32,7 @@ module Admins
 
     def destroy
       @answer.destroy
-      redirect_to @answer.question
+      redirect_to admins_question_path(@answer.question)
     end
 
     private

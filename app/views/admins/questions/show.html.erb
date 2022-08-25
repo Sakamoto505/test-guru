@@ -1,7 +1,7 @@
-<h1>Question:</h1>
+<h1><%= t('admins.question.question') %></h1>
 <p><%= @question.body %></p>
 
-<h2>Answers:</h2>
+<h2><%= t('admins.question.answers') %>:</h2>
 
 <%= link_to t('admins.question.show'), new_admins_question_answer_path(@question) %>
 

@@ -71,6 +71,10 @@ en:
         header: "Tricky Tests"
       form_inline:
         submit: 'Ок'
+    question:
+      show: 'Add new answer'
+      answers: 'Answers'
+      question: 'Question'
   gists:
     index:
       gists: "GISTS"
