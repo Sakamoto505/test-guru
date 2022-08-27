@@ -28,6 +28,14 @@ en:
       confirm: 'Are you sure?'
   navigation:
     back: 'Back'
+    edit: 'Edit'
+    show: 'Show'
+    delete: 'Delete'
+    admin_panel: 'Admin panel'
+    log_in: 'Log in'
+    sign_up: 'Sign up'
+    log_out: 'Log out'
+    gist: 'Gists'
   tests:
     index:
       header: "Tricky Tests"
@@ -68,6 +76,12 @@ en:
         header: "Tricky Tests"
       form_inline:
         submit: 'Ок'
+    question:
+      show: 'Add new answer'
+      answers: 'Answers'
+      question: 'Question'
+    answer:
+      header: 'Editing answer'
   gists:
     index:
       gists: "GISTS"
@@ -81,3 +95,5 @@ en:
   services:
     gist_question_services:
       description: 'A question about %{test_title} from TestGuru'
+  feedback:
+    title: 'Feedback form'

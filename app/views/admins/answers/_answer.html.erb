@@ -1,8 +1,8 @@
 <li>
   <td><%= answer.body %></td>
-  <td><%= link_to 'Show', admins_answer_path(answer) %></td>
-  <td><%= link_to 'Edit', edit_admins_answer_path(answer) %></td>
-  <td><%= link_to 'Delete', admins_answer_path(answer),
+  <td><%= link_to t('shared.action.show'), admins_answer_path(answer) %></td>
+  <td><%= link_to t('shared.action.edit'), edit_admins_answer_path(answer) %></td>
+  <td><%= link_to t('shared.action.delete'), admins_answer_path(answer),
                   method: :delete,
-                  data: { confirm: 'Are you sure?' } %></td>
+                  data: { confirm: t('shared.action.confirm') } %></td>
 </li>

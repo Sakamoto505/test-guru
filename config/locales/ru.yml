@@ -30,7 +30,14 @@ ru:
       confirm: 'Вы уверены?'
   navigation:
     back: 'Назад'
-    edit:
+    edit: 'Редактировать'
+    show: 'Посмотреть'
+    delete: 'Удалить'
+    admin_panel: 'Панель администратора'
+    log_in: 'Войти'
+    sign_up: 'Регистрация'
+    log_out: 'Выйти'
+    gist: 'Гисты'
   tests:
     index:
       header: "Доступные тесты"
@@ -72,6 +79,12 @@ ru:
         header: "Доступные тесты"
       form_inline:
         submit: 'Ок'
+    question:
+      show: 'Добавить новый ответ'
+      answers: 'Ответы'
+      question: 'Вопрос'
+    answer:
+      header: 'Редактировать ответ'
   gists:
     index:
       gists: "Гисты"
@@ -84,3 +97,5 @@ ru:
     copmleted_test:
       subject: 'Вы успешно завершили тест на  TestGuru!'
 
+  feedback:
+    title: 'Форма обратной связи '

@@ -1,9 +1,9 @@
-<h1>Question:</h1>
+<h1><%= t('admins.question.question') %></h1>
 <p><%= @question.body %></p>
 
-<h2>Answers:</h2>
+<h2><%= t('admins.question.answers') %>:</h2>
 
-<%= link_to 'New answer', new_admins_question_answer_path(@question) %>
+<%= link_to t('admins.question.show'), new_admins_question_answer_path(@question) %>
 
 <ol>
   <%= render @question.answers %>
@@ -11,6 +11,6 @@
 
 
 
-<br><%= link_to 'Back', edit_admins_test_path(@question) %><br>
-<td> <%= link_to 'Edit', edit_admins_question_path(@question) %></td>
-<br> <%= link_to 'Delete', admins_question_path(@question), method: :delete, data: {confirm: "Are you sure?"} %><br>
+<br><%= link_to t('navigation.back'), admins_tests_path %><br>
+<td> <%= link_to t('navigation.edit'), edit_admins_question_path(@question) %></td>
+<br> <%= link_to t('navigation.delete'), admins_question_path(@question), method: :delete, data: {confirm: "Are you sure?"} %><br>

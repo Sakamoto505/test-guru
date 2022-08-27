@@ -1,0 +1,14 @@
+
+<div class="row">
+  <h1><%= t('feedback.title') %></h1>
+  <%= form_with url: feedback_index_path , local: true do |form| %>
+    <p><%=form.label :feedback %><br>
+
+      <%=form.text_area :body,rows:7,cols:60 %>
+    </p>
+    <p><%=form.submit %></p>
+
+  <% end %>
+</div>
+
+<%= link_to t('navigation.back'), root_path%>
