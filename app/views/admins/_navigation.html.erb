@@ -1,11 +1,11 @@
 <nav class='navbar navbar-light bg-light '>
-  <span>TestGuru Admin Panel</span>
+  <span>TestGuru <%=t('navigation.admin_panel') %></span>
   <span class="p-2 text dark"><%= link_to 'TestGuru', root_path, class: "btn btn-primary btn-circle"%></span>
 
 
   <span class="navbar-text">
     Welcome, <%= current_user.email %> Admin |
-    <%= link_to 'Log out', destroy_user_session_path, method: :delete %> | <%= link_to 'Gists', admins_gists_path %>
+    <%= link_to t('navigation.log_out'), destroy_user_session_path, method: :delete %> | <%= link_to t('navigation.gist'), admins_gists_path %>
      </span>
 </nav>
 

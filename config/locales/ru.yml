@@ -33,6 +33,11 @@ ru:
     edit: 'Редактировать'
     show: 'Посмотреть'
     delete: 'Удалить'
+    admin_panel: 'Панель администратора'
+    log_in: 'Войти'
+    sign_up: 'Регистрация'
+    log_out: 'Выйти'
+    gist: 'Гисты'
   tests:
     index:
       header: "Доступные тесты"
@@ -78,6 +83,8 @@ ru:
       show: 'Добавить новый ответ'
       answers: 'Ответы'
       question: 'Вопрос'
+    answer:
+      header: 'Редактировать ответ'
   gists:
     index:
       gists: "Гисты"
