@@ -1,0 +1,14 @@
+<div class="row justify-content-center mt-1">
+  <div class="col">
+    <tr>
+      <th scope="col" style="text-align: center"><%= badge.title %></th>
+      <th scope="col" style="text-align: center"><%= badge.rule %></th>
+      <th scope="col" style="text-align: center"><%= badge.value %></th>
+      <td  scope="col" style="text-align: center" class="w-25"><img class="img-fluid img-thumbnail" src="<%=  badge.img_name %>"></td>
+      <td style="text-align: center"><%= link_to t('shared.action.delete'), admins_badge_path(badge),
+                                                 method: :delete,
+                                                 data: { confirm: t('shared.action.confirm') } %></td>
+    </tr>
+  </div>
+</div>
+

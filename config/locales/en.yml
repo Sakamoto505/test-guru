@@ -68,6 +68,15 @@ en:
     create:
       success: "Gist was successfully created! Here is your link - %{gist_url}"
       failure: "An error occurred while saving gist"
+  badge:
+    new:
+      title: 'Create new badge'
+    index:
+      header: 'Badge All'
+      title: 'Title'
+      rule: 'Rule'
+      value: 'Value'
+      img_name: 'Img'
   admins:
     tests:
       create:

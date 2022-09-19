@@ -1,0 +1,21 @@
+<h1><%=t('badge.index.header') %></h1>
+
+<%= link_to 'Созадать новый', new_admins_badge_path %>
+
+  <% if @badges.present? %>
+
+  <%= render 'shared/errors', resource: @badge %>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th scope="col" style="text-align: center"><%= t('badge.index.title') %></th>
+    <th scope="col" style="text-align: center"><%= t('badge.index.rule') %></th>
+    <th scope="col" style="text-align: center"><%= t('badge.index.value') %></th>
+    <th scope="col" style="text-align: center"><%= t('badge.index.img_name') %></th>
+    <th scope="col" style="text-align: center" colspan="1"><%= t('tests.index.actions') %></th>
+  </tr>
+  <%= render @badges %>
+  </thead>
+  </table>
+<%end %>

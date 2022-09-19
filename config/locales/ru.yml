@@ -71,6 +71,15 @@ ru:
     create:
       success: "Gist успешно сохранен! Вот ваша ссылка - %{gist_url}"
       failure: "Во время сохранения gist произошла ошибка"
+  badge:
+    new:
+      title: 'Создать новый бэйдж'
+    index:
+      header: 'Список всех бейджей'
+      title: 'Название'
+      rule: 'Правило'
+      value: 'Ценность'
+      img_name: 'Картинка'
   admins:
     tests:
       create:
@@ -92,6 +101,8 @@ ru:
       links: "Ссылка"
       user: "Пользователь"
       back: "Назад"
+
+
 
   tests_mailer:
     copmleted_test:
