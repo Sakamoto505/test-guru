@@ -28,6 +28,7 @@ ru:
       edit: 'Редактировать'
       delete: 'Удалить'
       confirm: 'Вы уверены?'
+      badges: 'Мои бэйджи'
   navigation:
     back: 'Назад'
     edit: 'Редактировать'

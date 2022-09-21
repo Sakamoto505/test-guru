@@ -6,7 +6,7 @@
   <span class="navbar-text">
     Welcome, <%= current_user.email %> Admin |
     <%= link_to t('navigation.log_out'), destroy_user_session_path, method: :delete %> | <%= link_to t('navigation.gist'), admins_gists_path %> |
-    <%= link_to 'Badge +-', admins_badges_path %>
+    <%= link_to t('shared.action.badges'), admins_badges_path %>
      </span>
 </nav>
 

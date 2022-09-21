@@ -26,6 +26,7 @@ en:
       edit: 'Edit'
       delete: 'Delete'
       confirm: 'Are you sure?'
+      badges: 'My badges'
   navigation:
     back: 'Back'
     edit: 'Edit'
