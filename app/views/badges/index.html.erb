@@ -1,0 +1,15 @@
+<h1><%=t('badge.index.header') %></h1>
+  <% if @badges.present? %>
+
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col" style="text-align: center"><%= t('badge.index.title') %></th>
+      <th scope="col" style="text-align: center"><%= t('badge.index.rule') %></th>
+      <th scope="col" style="text-align: center"><%= t('badge.index.value') %></th>
+      <th scope="col" style="text-align: center"><%= t('badge.index.img_name') %></th>
+    </tr>
+    <%= render @badges %>
+    </thead>
+  </table>
+<%end %>

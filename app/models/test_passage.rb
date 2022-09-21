@@ -39,6 +39,7 @@ class TestPassage < ApplicationRecord
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
+    self.badge_accept = 1 if success?
     save!
   end
 
