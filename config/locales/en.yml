@@ -62,6 +62,7 @@ en:
       question_current: 'Current test question: %{current}'
       gist_question : 'Gist Question'
       next: 'Next'
+      timer: 'Timer'
     result:
       header: "The %{title} Test was Completed "
       back: 'back to the all tests'
