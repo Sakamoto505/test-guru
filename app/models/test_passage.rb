@@ -34,19 +34,19 @@ class TestPassage < ApplicationRecord
   end
 
   def completed?
-    current_question.nil? || time_end
+    current_question.nil? || time_end?
   end
 
   def elapsed_time
-    Time.now.to_i - created_at.to_i
+    Time.zone.now.to_i - created_at.to_i
   end
 
-  def time_end
+  def time_end?
     test.timer - elapsed_time <= 0
   end
 
   def time_left
-    test.timer - elapsed_time if test.timer > 0
+    test.timer - elapsed_time if test.timer.positive?
   end
 
   def accept!(answer_ids)
