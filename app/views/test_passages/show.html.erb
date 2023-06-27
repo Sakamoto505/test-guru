@@ -13,6 +13,11 @@
   <p><b><%= @test_passage.current_question.body %></b></p>
 
   <h3><%= t('test_passages.show.question_sum', sum: @test_passage.test.questions.count) %></h3>
+    <div class="timer" data-timer="<%= @test_passage.time_left %>">
+      <div >
+        <%= t('test_passages.show.timer', time: @test_passage.time_left) %>
+      </div>
+    </div>
 
    <h3><%= t( 'test_passages.show.question_current', current: @test_passage.question_number )%></h3>
 

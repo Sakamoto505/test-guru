@@ -65,6 +65,7 @@ ru:
       question_current: 'Текущий вопрос теста: %{current}'
       gist_question : 'Гист вопрос'
       next: 'Вперед'
+      timer: 'Таймер'
     result:
       header: "Тест %{title} успешно завершен"
       back: 'Вернуться к списку тестов'
